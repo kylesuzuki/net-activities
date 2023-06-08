@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/FRRLw01.png" alt="Azure logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
+<h1>Performing Networking Activities within Azure VMs</h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
 
