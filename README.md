@@ -192,7 +192,7 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 
 <h3>Delete the Resource Group created earlier to avoid incurring costs.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Delete RG"/>
 </p>
 <p>
 <ul>
@@ -206,7 +206,7 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 
 <h3>Verify the successful deletion of the Resource Group.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Delete Verified"/>
 </p>
 <p>
 <ul>
