@@ -44,7 +44,7 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 
 <h3>Create a Resource Group.</h3>
 <p>
-<img src="https://i.imgur.com/YmqCvWZ.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 To create a research group in Azure, follow these steps: search for "Resource Group", click on 'Create', choose the desired subscription (e.g., Azure subscription 1), provide a name for the resource group (e.g., RG-Lab-2), select a region for its creation (e.g., West US 3), wait for validation on the "Review + create" page, click 'Create'.
@@ -53,7 +53,7 @@ To create a research group in Azure, follow these steps: search for "Resource Gr
 
 <h3>Create a Windows 10 Virtual Machine (VM).</h3>
 <p>
-<img src="https://i.imgur.com/D4LlhJ3.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 To create a Windows 10 Virtual Machine (VM) in Azure, follow these steps: search for "Virtual Machine", click on 'Create', choose "Azure virtual machine", select the desired subscription (e.g., Azure subscription 1), specify the resource group (e.g., RG-Lab-2), provide a name for the virtual machine (e.g., VM1), and select a region for its creation (e.g., West US 3).
@@ -68,7 +68,7 @@ For the subnet configuration, make sure it is set to "(new) default (10.0.0.0/24
 
 <h3>Create a Linux (Ubuntu) VM.</h3>
 <p>
-<img src="https://i.imgur.com/Vesiv6r.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 To create a Linux (Ubuntu) VM in Azure, follow these steps: search for "Virtual Machine", click on 'Create', choose "Azure virtual machine", select the desired subscription (e.g., Azure subscription 1), specify the resource group (e.g., RG-Lab-2), provide a name for the virtual machine (e.g., VM2), and pick the same region as the previously created virtual machine ((US) West US 3).
@@ -80,7 +80,7 @@ Click 'Next', leave the disk options as they are, and proceed to the next step. 
 
 <h3>Observe your Virtual Network within Network Watcher.</h3>
 <p>
-<img src="https://i.imgur.com/vvNXCvY.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 To observe your virtual network within Network Watcher in Azure, follow these steps: search for "Network Watcher", click on 'Topology', select the desired resource group (e.g., RG-Lab-2), and choose the virtual network (e.g., RG-Lab-2-vnet).
@@ -90,7 +90,7 @@ Once you access the topology, take the time to observe and understand the networ
 
 <h3>Install Wireshark within your Windows 10 VM.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 To install Wireshark on your Windows 10 VM, follow these steps: search for "Virtual Machine", click on 'VM1' and copy the Public IP address. Then, open the Remote Desktop Connection application on your computer and paste the Public IP address. Click connect and enter the credentials (username and password) you created for your Windows 10 VM earlier. If a warning message appears stating that it's not trustworthy, simply click 'Yes'. Additionally, a "Choose privacy settings for your device" message may pop up. Just set all options to "No" and click 'Accept'. 
@@ -101,7 +101,7 @@ Open Microsoft Edge, click 'Start without your data' if it appears, then <a href
 
 <h3>Observe ICMP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/Mt2AoZa.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 To observe ICMP traffic, follow these steps: launch the Wireshark application, type "icmp", and press enter to filter just the ICMP traffic.
@@ -127,7 +127,7 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 
 <h3>Observe SSH Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 
@@ -135,7 +135,7 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 
 <h3>Observe DHCP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 
@@ -143,7 +143,7 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 
 <h3>Observe DNS Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt=""/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt=""/>
 </p>
 <p>
 
@@ -151,7 +151,7 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 
 <h3>Observe RDP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
 
@@ -162,13 +162,7 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Delete RG"/>
 </p>
 <p>
-<ul>
-  <li>Search for Resource Group</li>
-  <li>Click on your resource group (i.e., ‘RG-Lab-1’)</li>
-  <li>Click 'Delete resource group'</li>
-  <li>Type or copy and paste the name of your resource group (i.e., RG-Lab-1) to confirm the deletion</li>
-  <li>Click ‘Delete’</li>
-</ul>
+To delete the Resource Group, follow these steps: search "Resource Group", click on the resource group (e.g., RG-Lab-2), click 'Delete resource group', then type or copy and paste the name of your resource group (e.g., RG-Lab-2) to confirm the deletion. Click 'Delete'.
 </p>
 
 <h3>Verify the successful deletion of the Resource Group.</h3>
@@ -176,8 +170,5 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Delete Verified"/>
 </p>
 <p>
-<ul>
-  <li>Search for Resource Group</li>
-  <li>Confirm that your resource group has been deleted</li>
-</ul>
+To verify the successful deletion of the Resource Group, search "Resource Group" and confirm that your specified resource group (e.g., RG-Lab-2) is no longer listed.
 </p>
