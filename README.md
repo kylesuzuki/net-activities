@@ -12,13 +12,13 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 - Create a Resource Group.
 - Create a Windows 10 Virtual Machine (VM).
 - Create a Linux (Ubuntu) VM.
-- Observe Your Virtual Network within Network Watcher.
+- Observe your Virtual Network within Network Watcher.
+- Install Wireshark within your Windows 10 VM.
 - Observe ICMP Traffic.
 - Observe SSH Traffic.
 - Observe DHCP Traffic.
 - Observe DNS Traffic.
 - Observe RDP Traffic.
-- Observe DNS Traffic.
 - Delete the Resource Group to avoid incurring costs.
 - Verify the successful deletion of the Resource Group.
 
@@ -37,159 +37,124 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 
 <h2>List of Prerequisites</h2>
 
-- Active <a href="https://azure.microsoft.com/en-us/free/">Azure account (Tenant) and Subscription</a> 
+- Active <a href="https://azure.microsoft.com/en-us/free/">Azure account (Tenant) and Subscription</a>
+- Completion of <a href="https://github.com/kylesuzuki/azure-prereq">Azure Account and Storage Lab</a> (highly recommended)
 
 <h2>Installation Steps</h2>
 
-<h3>Create your Azure account (Tenant) and Subscription.</h3>
+<h3>Create a Resource Group.</h3>
 <p>
-<img src="https://i.imgur.com/YmqCvWZ.png" height="80%" width="80%" alt="Account Creation"/>
-</p>
-<ul>
-  <li>
-    <a href="https://azure.microsoft.com/en-us/free/">Create an Azure account</a> (Tenant) and Subscription if you haven't done so already.
-  </li>
-</ul>
-
-
-<h3>Within the Azure Portal, create a Resource Group.</h3>
-<p>
-<img src="https://i.imgur.com/D4LlhJ3.png" height="80%" width="80%" alt="RG creation"/>
+<img src="https://i.imgur.com/YmqCvWZ.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Search for Resource Group
-    <ul>
-      <li>Note: A Resource Group is essentially a folder</li>
-    </ul>
-  </li>
-  <li>Click 'Create'</li>
-  <li>Choose your Subscription (i.e., 'Azure subscription 1')
-    <ul>
-      <li>Note: A Subscription provides access to Azure services while enabling the separatation and management of resources, usage, and billing. </li>
-    </ul>
-  </li>
-  <li>Write a name for your resource group (i.e., RG-Lab-1)</li>
-  <li>Pick a Region where the resource group is being created (i.e., '(US) West US 2')</li>
-  <li>For now, skip creating a tag since not necessary
-    <ul>
-      <li>Note: A tag is used to effectively track data and metadata within your organization</li>
-    </ul>
-  </li>
-  <li>Wait for validation on "Review + create", then click 'Create'</li>
-</ul>
+To create a research group in Azure, follow these steps: search for "Resource Group", click on 'Create', choose the desired subscription (e.g., Azure subscription 1), provide a name for the resource group (e.g., RG-Lab-2), select a region for its creation (e.g., West US 3), wait for validation on the "Review + create" page, click 'Create'.
 </p>
 
 
-<h3>Create a Storage Account within the previously created Resource Group.</h3>
+<h3>Create a Windows 10 Virtual Machine (VM).</h3>
 <p>
-<img src="https://i.imgur.com/Vesiv6r.png" height="80%" width="80%" alt="Storage Group creation"/>
+<img src="https://i.imgur.com/D4LlhJ3.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Search for Storage Account
-    <ul>
-      <li>Note: A Storage Account is one of the many resource types available in Azure, offering functionality akin to a very powerful Dropbox or Google Drive.</li>
-    </ul>
-  </li>
-  <li>Click 'Create'</li>
-  <li>Choose your Subscription (i.e., 'Azure subscription 1')</li>
-  <li>Choose your resource group (i.e., 'RG-Lab-1')</li>
-  <li>Write a name for your storage account (i.e., joshcoursecareerslab01)</li>
-  <li>Pick a Region where the storage account is being created (i.e., '(US) West US 2')</li>
-  <li>Choose your Performance (i.e., 'Standard')</li>
-  <li>Choose your Redundancy (i.e., 'Geo-redundant storage (GRS)')</li>
-  <li>Wait for validation on "Review + create" then click 'Create'</li>
-</ul>
+To create a Windows 10 Virtual Machine (VM) in Azure, follow these steps: search for "Virtual Machine", click on 'Create', choose "Azure virtual machine", select the desired subscription (e.g., Azure subscription 1), specify the resource group (e.g., RG-Lab-2), provide a name for the virtual machine (e.g., VM1), and select a region for its creation (e.g., West US 3).
+
+Next, click on 'Image' and choose "Windows 10 Pro, version 21H2 - Gen2 (free services eligible)". Then, click on 'Size' and choose "Standard_E2s_v3 - 2 vcpus, 16 GiB memory ($91.98/month)". Set the desired username (e.g., labuser) and password (e.g., Password1).
+
+Ensure the box under Licensing stating "I confirm I have an eligible Windows 10/11 license with multi-tenant hosting rights" is checked. Click 'Next' and leave the disk options as they are.
+
+For the subnet configuration, make sure it is set to "(new) default (10.0.0.0/24)". Wait for validation on the "Review + create" page, click 'Create'.
 </p>
 
-<h3>Upload a file from your local desktop into the Storage Account.</h3>
+
+<h3>Create a Linux (Ubuntu) VM.</h3>
 <p>
-<img src="https://i.imgur.com/vvNXCvY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Vesiv6r.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Open the storage account you just created (i.e., 'joshcoursecareerslab01')</li>
-  <li>Click 'Containers'
-    <ul>
-      <li>Note: a Container is like an individual folder inside of our Storage Account</li>
-    </ul>
-  </li>
-  <li>Click '+ Container' to create a Container</li>
-  <li>Write a name for your container (i.e., cclab01)</li>
-  <li>Choose Public access level (i.e., 'Private (no anonymous access)')</li>
-  <li>Click 'Create', then open the container</li>
-  <li>Open the Notepad application on your computer, write something (i.e., Hello World), and save the file</li>
-  <li>Click '+ Upload' and select the notepad file to upload</li>
-</ul>
+To create a Linux (Ubuntu) VM in Azure, follow these steps: search for "Virtual Machine", click on 'Create', choose "Azure virtual machine", select the desired subscription (e.g., Azure subscription 1), specify the resource group (e.g., RG-Lab-2), provide a name for the virtual machine (e.g., VM2), and pick the same region as the previously created virtual machine ((US) West US 3).
+
+Next, click on 'Image' and choose "Ubuntu Server 20.04 LTS - Gen2 (free services eligible)". Click on 'Size' and choose "Standard_E2s_v3 - 2 vcpus, 16 GiB memory ($91.98/month)". Set the authentication type to "Password" and specify the username (e.g., labuser) and password (e.g., Password1).
+
+Click 'Next', leave the disk options as they are, and proceed to the next step. Ensure that the virtual network is set to 'RG-Lab-2-vnet' and the subnet is set to "default (10.0.0.0/24)". Wait for validation on the "Review + create" page, click 'Create'
 </p>
 
-<h3>Edit the file within the Storage Account in the Azure Portal.</h3>
+<h3>Observe your Virtual Network within Network Watcher.</h3>
 <p>
-<img src="https://i.imgur.com/Mt2AoZa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vvNXCvY.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Click on the "three dots" next to your uploaded Notepad file</li>
-  <li>Click 'View/edit'</li>
-  <li>Edit the file directly from inside the storage account container (make some changes to the text as you wish)</li>
-  <li>Click 'Save'</li>
-</ul>
+To observe your virtual network within Network Watcher in Azure, follow these steps: search for "Network Watcher", click on 'Topology', select the desired resource group (e.g., RG-Lab-2), and choose the virtual network (e.g., RG-Lab-2-vnet).
+
+Once you access the topology, take the time to observe and understand the network structure and connections of your setup. This will provide you with a visual representation of your virtual network configuration and help you gain insights into its components and relationships.
 </p>
 
-<h3>Download the file to observe the changes.</h3>
+<h3>Install Wireshark within your Windows 10 VM.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Click 'Download'</li>
-  <li>Open the downloaded file on your computer and observe the edits</li>
-</ul>
+To install Wireshark on your Windows 10 VM, follow these steps: search for "Virtual Machine", click on 'VM1' and copy the Public IP address. Then, open the Remote Desktop Connection application on your computer and paste the Public IP address. Click connect and enter the credentials (username and password) you created for your Windows 10 VM earlier. If a warning message appears stating that it's not trustworthy, simply click 'Yes'. Additionally, a "Choose privacy settings for your device" message may pop up. Just set all options to "No" and click 'Accept'. 
+
+Open Microsoft Edge, click 'Start without your data' if it appears, then <a href="https://www.wireshark.org/download.html">download Wireshark</a> (Windows Installer (64-bit)). Open the downloaded file and follow the setup instructions to install Wireshark.
 </p>
 
-<h3>Download the file to observe the changes.</h3>
+
+<h3>Observe ICMP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Mt2AoZa.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Click 'Download'</li>
-  <li>Open the downloaded file on your computer and observe the edits</li>
-</ul>
+To observe ICMP traffic, follow these steps: launch the Wireshark application, type "icmp", and press enter to filter just the ICMP traffic.
+
+Back in Azure, search "Virtual Machine", click on 'VM2' and copy the Private IP address.
+
+Back in your Windows 10 VM, open PowerShell and type "ping" followed by the copied Private IP address. Press enter to initiate the ping command. Observe the ping requests and replies within the Wireshark application.
+
+Still in your Windows 10 VM's PowerShell, now type "ping" followed by a public website's URL (e.g., www.google.com). Press enter to execute the command. Observe the ping requests and replies within the Wireshark application.
+
+Still in your Windows 10 VM's PowerShell, type "ping" followed by the copied Private IP address again, this time appending "-t" to the Private IP address. This will create a perpetual ping loop, allowing you to continuously monitor the connectivity.
+
+Back in Azure, search "Network Security Groups", click 'VM2-nsg', click 'Inbound security rules', and click '+ Add' to create a new inbound security rule. Configure the rule as follows: set Source to "Any", Source port ranges to *, Destination to "Any", and Service to "Custom". Protocol to "ICMP", Action to "Deny", Priority to 200, and assign a name to the rule (e.g., "DENY_ICMP_PING_FROM_ANYWHERE"). Click 'Add'.
+
+Back in your Windows 10 VM, notice the ping requests initiated from PowerShell start to time out both in PowerShell and Wireshark. This is because the ICMP traffic is now being blocked by the NSG associated with VM2, preventing VM2 from responding to the pings.
+
+To re-enable ICMP traffic, go back in Azure, search "Network Security Groups", click 'VM2-nsg', click 'Inbound security rules', and click the inbound security rule you just created (e.g., "DENY_ICMP_PING_FROM_ANYWHERE"). Either change the Action to "Allow" or delete the inbound security rule.
+
+Back in your Windows 10 VM, notice the ping requests initiated from PowerShell start to resume again in both PowerShell and Wireshark. This indicates that the ICMP traffic is no longer blocked by the NSG associated with VM2.
+
+To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 </p>
 
-<h3>Download the file to observe the changes.</h3>
+<h3>Observe SSH Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Click 'Download'</li>
-  <li>Open the downloaded file on your computer and observe the edits</li>
-</ul>
+
 </p>
 
-<h3>Download the file to observe the changes.</h3>
+<h3>Observe DHCP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
-<ul>
-  <li>Click 'Download'</li>
-  <li>Open the downloaded file on your computer and observe the edits</li>
-</ul>
+
 </p>
 
-<h3>Download the file to observe the changes.</h3>
+<h3>Observe DNS Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt=""/>
 </p>
 <p>
-<ul>
-  <li>Click 'Download'</li>
-  <li>Open the downloaded file on your computer and observe the edits</li>
-</ul>
+
+</p>
+
+<h3>Observe RDP Traffic.</h3>
+<p>
+<img src="https://i.imgur.com/UXkpAM1.png" height="80%" width="80%" alt="!123456789!"/>
+</p>
+<p>
+
 </p>
 
 <h3>Delete the Resource Group created earlier to avoid incurring costs.</h3>
