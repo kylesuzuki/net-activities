@@ -12,7 +12,6 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 - Create a Resource Group.
 - Create a Windows 10 Virtual Machine (VM).
 - Create a Linux (Ubuntu) VM.
-- Observe your Virtual Network within Network Watcher.
 - Install Wireshark within your Windows 10 VM.
 - Observe ICMP Traffic.
 - Observe SSH Traffic.
@@ -44,7 +43,7 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 
 <h3>Create a Resource Group.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/3Qafc6P.png" height="80%" width="80%" alt="RG Creation"/>
 </p>
 <p>
 To create a research group in Azure, follow these steps: search for "Resource Group", click on 'Create', choose the desired subscription (e.g., Azure subscription 1), provide a name for the resource group (e.g., RG-Lab-2), select a region for its creation (e.g., West US 3), wait for validation on the "Review + create" page, click 'Create'.
@@ -53,7 +52,7 @@ To create a research group in Azure, follow these steps: search for "Resource Gr
 
 <h3>Create a Windows 10 Virtual Machine (VM).</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/pbYsW8q.png" height="80%" width="80%" alt="Window VM Creation"/>
 </p>
 <p>
 To create a Windows 10 Virtual Machine (VM) in Azure, follow these steps: search for "Virtual Machine", click on 'Create', choose "Azure virtual machine", select the desired subscription (e.g., Azure subscription 1), specify the resource group (e.g., RG-Lab-2), provide a name for the virtual machine (e.g., VM1), and select a region for its creation (e.g., West US 3).
@@ -68,7 +67,7 @@ For the subnet configuration, make sure it is set to "(new) default (10.0.0.0/24
 
 <h3>Create a Linux (Ubuntu) VM.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/GVWotlE.png" height="80%" width="80%" alt="Linux VM Creation"/>
 </p>
 <p>
 To create a Linux (Ubuntu) VM in Azure, follow these steps: search for "Virtual Machine", click on 'Create', choose "Azure virtual machine", select the desired subscription (e.g., Azure subscription 1), specify the resource group (e.g., RG-Lab-2), provide a name for the virtual machine (e.g., VM2), and pick the same region as the previously created virtual machine ((US) West US 3).
@@ -76,16 +75,6 @@ To create a Linux (Ubuntu) VM in Azure, follow these steps: search for "Virtual 
 Next, click on 'Image' and choose "Ubuntu Server 20.04 LTS - Gen2 (free services eligible)". Click on 'Size' and choose "Standard_E2s_v3 - 2 vcpus, 16 GiB memory ($91.98/month)". Set the authentication type to "Password" and specify the username (e.g., labuser) and password (e.g., Password1).
 
 Click 'Next', leave the disk options as they are, and proceed to the next step. Ensure that the virtual network is set to 'RG-Lab-2-vnet' and the subnet is set to "default (10.0.0.0/24)". Wait for validation on the "Review + create" page, click 'Create'
-</p>
-
-<h3>Observe your Virtual Network within Network Watcher.</h3>
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
-</p>
-<p>
-To observe your virtual network within Network Watcher in Azure, follow these steps: search for "Network Watcher", click on 'Topology', select the desired resource group (e.g., RG-Lab-2), and choose the virtual network (e.g., RG-Lab-2-vnet).
-
-Once you access the topology, take the time to observe and understand the network structure and connections of your setup. This will provide you with a visual representation of your virtual network configuration and help you gain insights into its components and relationships.
 </p>
 
 <h3>Install Wireshark within your Windows 10 VM.</h3>
