@@ -130,7 +130,19 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
+To observe SSH traffic, follow these steps: type either "ssh" or "tcp.port == 22" in Wireshark on your Windows 10 VM and press enter to filter just the SSH traffic.
+  
+Still in your Windows 10 VM, type "ssh [VM2 username]@[VM2 private IP address]" into Powershell. Replace [username] with the username you created earlier for VM2 and [VM2 private IP address] with the actual private IP address of VM2. Press enter. A prompt will appear asking, "Are you sure you want to continue connecting (yes/no/[fingerprint])?" Type "yes" and press enter. Type the password you created earlier for VM2 (you will not be able to see the characters as you type) and press enter.
 
+Within the Linux SSH connection, you can enter various commands and observe the corresponding SSH traffic in Wireshark:
+  <ul>
+  <li>Type "uname -a" and press enter. This command displays the operating system running on VM2.</li>
+  <li>Type "pwd" and press enter. This command prints the current working directory.</li>
+  <li>Type "ls -lasth" and press enter. This command lists the folders and files in the current directory, displaying them in a detailed format.</li>
+  <li>Type "touch hi.txt" and press enter. This command creates a new file named "hi.txt".</li>
+  <li>Press the up button on your keyboard until you retrieve the previous "ls -lasth" command, and press enter. Notice that the newly created "hi.txt" file is now listed.</li>
+  <li>Type "exit" and press enter. This command exists the SSH connection.</li>
+  </ul>
 </p>
 
 <h3>Observe DHCP Traffic.</h3>
@@ -138,7 +150,9 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
+To observe DHCP traffic, follow these steps: type "dhcp" in Wireshark on your Windows 10 VM and press enter to filter just the DHCP traffic.
 
+Still in your Windows 10 VM, type "ipconfig /renew" into Powershell and press enter. This command triggers a DHCP renewal process where VM1 broadcasts a request for a new IP address on the virtual network. Azure's DHCP server then responds by re-issuing an IP address to VM1. While running this command, you can observe the DHCP traffic in Wireshark, confirming the exchange of DHCP messages over the network and indicating that the IP address has been successfully re-issued to VM1.
 </p>
 
 <h3>Observe DNS Traffic.</h3>
@@ -146,7 +160,11 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt=""/>
 </p>
 <p>
+To observe DNS traffic, follow these steps: type either "dns" or "udp.port == 53" in Wireshark on your Windows 10 VM and press enter to filter just the DNS traffic.
 
+Still in your Windows 10 VM, type "nslookup www.google.com" into Powershell and press enter. You will receive a response from the DNS server in PowerShell, providing the IPv4 address of www.google.com. Additionally, you will notice a series of DNS traffic in Wireshark, indicating that the DNS server performed various lookups to retrieve information about www.google.com and return its IP address.
+
+As an optional step, you can repeat the previous instructions to determine the IP addresses associated with the domain disney.com. 
 </p>
 
 <h3>Observe RDP Traffic.</h3>
@@ -154,7 +172,11 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
 </p>
 <p>
+To observe RDP traffic, follow these steps: type either "rdp" or "tcp.port == 3389" in Wireshark on your Windows 10 VM and press enter to filter just the RDP traffic.
 
+As you observe the captured traffic, you will notice a continuous stream of data. The source and destination addresses will correspond to the IP address of VM1 (the virtual machine) and your local computer's IP address, respectively.
+
+The reason for the continuous spam of traffic is because we are currently using RDP to establish a remote connection and interact with the virtual machine. As a result, there is a constant flow of RDP traffic being exchanged between your local computer and VM1. This non-stop traffic occurs even when you are not actively performing any specific activity, as the RDP connection remains active.
 </p>
 
 <h3>Delete the Resource Group created earlier to avoid incurring costs.</h3>
