@@ -16,8 +16,8 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 - Observe DHCP Traffic.
 - Observe DNS Traffic.
 - Observe RDP Traffic.
-- Delete the Resource Group to avoid incurring costs.
-- Verify the successful deletion of the Resource Group.
+- Delete the Resource Groups to avoid incurring costs.
+- Verify the successful deletion of the Resource Groups.
 
 <h2>Environments and Technologies Used</h2>
 
@@ -165,7 +165,7 @@ As you observe the captured traffic, you will notice a continuous stream of data
 The reason for the continuous spam of traffic is because we are currently using RDP to establish a remote connection and interact with the virtual machine. As a result, there is a constant flow of RDP traffic being exchanged between your local computer and VM1. This non-stop traffic occurs even when you are not actively performing any specific activity, as the RDP connection remains active.
 </p>
 
-<h3>Delete the Resource Group created earlier to avoid incurring costs.</h3>
+<h3>Delete the Resource Groups created earlier to avoid incurring costs.</h3>
 <p>
 <img src="https://i.imgur.com/wNlmze9.png" height="80%" width="80%" alt="Delete RG"/>
 </p>
