@@ -47,7 +47,6 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 To create a research group in Azure, follow these steps: search for "Resource Group", click on 'Create', choose the desired subscription (e.g., Azure subscription 1), provide a name for the resource group (e.g., RG-Lab-2), select a region for its creation (e.g., West US 3), wait for validation on the "Review + create" page, click 'Create'.
 </p>
 
-
 <h3>Create a Windows 10 Virtual Machine (VM).</h3>
 <p>
 <img src="https://i.imgur.com/pbYsW8q.png" height="80%" width="80%" alt="Window VM Creation"/>
@@ -61,7 +60,6 @@ Ensure the box under Licensing stating "I confirm I have an eligible Windows 10/
 
 For the subnet configuration, make sure it is set to "(new) default (10.0.0.0/24)". Wait for validation on the "Review + create" page, click 'Create'.
 </p>
-
 
 <h3>Create a Linux (Ubuntu) VM.</h3>
 <p>
