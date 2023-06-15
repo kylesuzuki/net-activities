@@ -21,7 +21,7 @@ This beginner-friendly tutorial provides hands-on experience with Azure networki
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines/Computers)
 - Remote Desktop
 - Various Command-Line Tools
 - Various Network Protocols (ICMP, SSH, DHCP, DNS, RDP)
