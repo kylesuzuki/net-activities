@@ -1,5 +1,3 @@
-<h1>Work in Progress (please check back later for updates).</h1>
-
 <p align="center">
 <img src="https://i.imgur.com/FRRLw01.png" alt="Azure logo"/>
 </p>
@@ -79,7 +77,7 @@ Click 'Next', leave the disk options as they are, and proceed to the next step. 
 
 <h3>Install Wireshark within your Windows 10 VM.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/MTRGtSR.png" height="80%" width="80%" alt="Install Wireshark"/>
 </p>
 <p>
 To install Wireshark on your Windows 10 VM, follow these steps: search for "Virtual Machine", click on 'VM1' and copy the Public IP address. Then, open the Remote Desktop Connection application on your computer and paste the Public IP address. Click connect and enter the credentials (username and password) you created for your Windows 10 VM earlier. If a warning message appears stating that it's not trustworthy, simply click 'Yes'. Additionally, a "Choose privacy settings for your device" message may pop up. Just set all options to "No" and click 'Accept'. 
@@ -87,10 +85,9 @@ To install Wireshark on your Windows 10 VM, follow these steps: search for "Virt
 Open Microsoft Edge, click 'Start without your data' if it appears, then <a href="https://www.wireshark.org/download.html">download Wireshark</a> (Windows Installer (64-bit)). Open the downloaded file and follow the setup instructions to install Wireshark.
 </p>
 
-
 <h3>Observe ICMP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/GT0gM6d.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
 To observe ICMP traffic, follow these steps: launch the Wireshark application, type "icmp", and press enter to filter just the ICMP traffic.
@@ -116,7 +113,7 @@ To stop the perpetual ping in PowerShell, press 'CTRL + C'.
 
 <h3>Observe SSH Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/saQJeGN.png" height="80%" width="80%" alt="SSH Traffic"/>
 </p>
 <p>
 To observe SSH traffic, follow these steps: type either "ssh" or "tcp.port == 22" in Wireshark on your Windows 10 VM and press enter to filter just the SSH traffic.
@@ -136,7 +133,7 @@ Within the Linux SSH connection, you can enter various commands and observe the 
 
 <h3>Observe DHCP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/GK8tuBs.png" height="80%" width="80%" alt="DHCP Traffic"/>
 </p>
 <p>
 To observe DHCP traffic, follow these steps: type "dhcp" in Wireshark on your Windows 10 VM and press enter to filter just the DHCP traffic.
@@ -146,7 +143,7 @@ Still in your Windows 10 VM, type "ipconfig /renew" into Powershell and press en
 
 <h3>Observe DNS Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt=""/>
+<img src="https://i.imgur.com/8r7blHa.png" height="80%" width="80%" alt="DNS Traffic"/>
 </p>
 <p>
 To observe DNS traffic, follow these steps: type either "dns" or "udp.port == 53" in Wireshark on your Windows 10 VM and press enter to filter just the DNS traffic.
@@ -158,7 +155,7 @@ As an optional step, you can repeat the previous instructions to determine the I
 
 <h3>Observe RDP Traffic.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="!123456789!"/>
+<img src="https://i.imgur.com/5XVzhIV.png" height="80%" width="80%" alt="RDP Traffic"/>
 </p>
 <p>
 To observe RDP traffic, follow these steps: type either "rdp" or "tcp.port == 3389" in Wireshark on your Windows 10 VM and press enter to filter just the RDP traffic.
@@ -170,16 +167,18 @@ The reason for the continuous spam of traffic is because we are currently using 
 
 <h3>Delete the Resource Group created earlier to avoid incurring costs.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Delete RG"/>
+<img src="https://i.imgur.com/wNlmze9.png" height="80%" width="80%" alt="Delete RG"/>
 </p>
 <p>
 To delete the Resource Group, follow these steps: search "Resource Group", click on the resource group (e.g., RG-Lab-2), click 'Delete resource group', then type or copy and paste the name of your resource group (e.g., RG-Lab-2) to confirm the deletion. Click 'Delete'.
+
+Repeat these steps for the NetworkWatcherRG resource group that was automatically created earlier as well.
 </p>
 
-<h3>Verify the successful deletion of the Resource Group.</h3>
+<h3>Verify the successful deletion of the Resource Groups.</h3>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Delete Verified"/>
+<img src="https://i.imgur.com/vfekx03.png" height="80%" width="80%" alt="Delete Verified"/>
 </p>
 <p>
-To verify the successful deletion of the Resource Group, search "Resource Group" and confirm that your specified resource group (e.g., RG-Lab-2) is no longer listed.
+To verify the successful deletion of the Resource Groups, search "Resource Group" and confirm that your specified resource groups (e.g., RG-Lab-2 and NetworkWatcherRG) are no longer listed.
 </p>
